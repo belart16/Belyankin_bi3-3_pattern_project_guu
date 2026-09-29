@@ -16,5 +16,12 @@ ivan@mail.ru
 True
 """
 
-# TODO: проверьте все три правила (пригодятся count и find)
+email = input()
+is_valid = (
+    email.count("@") == 1 and
+    email.find("@") != 0 and
+    email.find("@") != len(email) - 1 and
+    email.find(".", email.find("@")) != -1
+)
+print(is_valid)
 

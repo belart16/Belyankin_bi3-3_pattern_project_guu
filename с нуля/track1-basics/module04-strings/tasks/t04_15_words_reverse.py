@@ -12,5 +12,7 @@
 три два один
 """
 
-# TODO: разберите на слова, переверните порядок и соберите строку
+s = input().split()
+reversed_words = s[::-1]
+print(" ".join(reversed_words))
 

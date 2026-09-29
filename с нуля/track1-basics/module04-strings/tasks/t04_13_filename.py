@@ -17,5 +17,7 @@ my.file.txt
 Расширение: txt
 """
 
-# TODO: разделите строку справа по точке (rsplit) и выведите обе части
-
+filename = input()
+name, extension = filename.rsplit(".", 1)
+print(f"Имя: {name}")
+print(f"Расширение: {extension}")

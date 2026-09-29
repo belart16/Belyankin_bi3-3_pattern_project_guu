@@ -12,5 +12,6 @@ abc1
 True
 """
 
-# TODO: переберите символы и проверьте isdigit()
+s = input()
+print(any(char.isdigit() for char in s))
 

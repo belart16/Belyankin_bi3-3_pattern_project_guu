@@ -12,5 +12,10 @@
 python
 """
 
-# TODO: найдите самое длинное слово перебором
+s = input().split()
+longest_word = s[0]
+for word in s:
+    if len(word) > len(longest_word):
+        longest_word = word
+print(longest_word)
 

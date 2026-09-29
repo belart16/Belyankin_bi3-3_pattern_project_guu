@@ -15,5 +15,7 @@
 Привет Большой Мир
 """
 
-# TODO: split → capitalize каждого слова → join
+s = input().split()
+capitalized_words = [word.capitalize() for word in s]
+print(" ".join(capitalized_words))
 

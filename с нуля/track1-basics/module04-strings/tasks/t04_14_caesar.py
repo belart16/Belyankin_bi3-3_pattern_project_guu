@@ -20,5 +20,16 @@ zab
 верните символ через chr(... + ord("a")).
 """
 
-# TODO: прочитайте сдвиг и строку, зашифруйте каждую букву
+k = int(input())
+s = input()
 
+encrypted = ""
+for char in s:
+    if char.islower():
+        code = ord(char) - ord("a")
+        new_code = (code + k) % 26
+        encrypted += chr(new_code + ord("a"))
+    else:
+        encrypted += char
+
+print(encrypted)

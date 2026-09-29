@@ -12,5 +12,6 @@
 И.И.И.
 """
 
-# TODO: разберите строку на слова и соберите инициалы
-
+s = input().split()
+initials = [word[0] for word in s]
+print(".".join(initials) + ".")
