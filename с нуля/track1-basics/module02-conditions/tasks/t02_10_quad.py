@@ -21,5 +21,18 @@
 
 import math
 
-# TODO: прочитайте коэффициенты, вычислите дискриминант и выведите корни
+a = int(input())
+b = int(input())
+c = int(input())
 
+D = b ** 2 - 4 * a * c
+
+if D < 0:
+    print("нет корней")
+elif D == 0:
+    X = -b / (2 * a)
+    print(f"один корень: {X:.3f}")
+else:
+    X1 = (-b + math.hypot(D)) / (2 * a)
+    X2 = (-b - math.hypot(D)) / (2 * a)
+    print(f"два корня: {min(X1, X2):.3f} {max(X1, X2):.3f}")

@@ -15,5 +15,7 @@
 9
 """
 
-# TODO: прочитайте три числа и выведите наибольшее через if/elif/else
+a = int(input())
+b = int(input())
+c = int(input())
 

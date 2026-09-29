@@ -17,5 +17,13 @@
 199.0
 """
 
-# TODO: прочитайте три цены и выведите наименьшую через сравнения
+price1 = float(input())
+price2 = float(input())
+price3 = float(input())
 
+if price1 <= price2 and price1 <= price3:
+    print(price1)
+elif price2 <= price1 and price2 <= price3:
+    print(price2)
+else:
+    print(price3)

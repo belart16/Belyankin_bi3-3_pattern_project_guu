@@ -22,5 +22,12 @@
 120.0
 """
 
-# TODO: прочитайте возраст и час, примените скидки и выведите итог
+age = int(input())
+time = int(input())
+price = 300 
 
+if age < 12:
+    price /= 2
+if time < 18:
+    price *= 0.8
+print(f"{price:.1f}")
