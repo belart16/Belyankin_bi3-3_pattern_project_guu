@@ -22,5 +22,15 @@
 
 n = int(input())
 
-# TODO: читайте числа и отслеживайте два максимума; выведите второй
+max1 = float('-inf')
+max2 = float('-inf')
 
+for _ in range(n):
+    num = int(input())
+    if num > max1:
+        max2 = max1
+        max1 = num
+    elif num > max2:
+        max2 = num
+
+print(max2)
