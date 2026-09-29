@@ -20,7 +20,8 @@ True
 False
 """
 
-# TODO: прочитайте число n
 
-# TODO: сравните первую и последнюю цифру и выведите результат сравнения
-
+n = int(input())
+first_digit = n // 100
+last_digit = n % 10
+print(first_digit == last_digit)

@@ -23,7 +23,10 @@
 затем к остатку и 60.
 """
 
-# TODO: прочитайте число секунд
+seconds = int(input())
+hours, remainder = divmod(seconds, 3600)
+minutes, seconds = divmod(remainder, 60)
 
-# TODO: выведите часы, минуты и секунды с подписями
-
+print(f"Часов: {hours}")
+print(f"Минут: {minutes}")
+print(f"Секунд: {seconds}")

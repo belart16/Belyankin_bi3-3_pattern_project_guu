@@ -19,7 +19,9 @@
 Сотни: n // 100, десятки: n // 10 % 10, единицы: n % 10.
 """
 
-# TODO: прочитайте число n
-
-# TODO: выведите сумму цифр с подписью
-
+n = int(input())
+hundreds = n // 100
+tens = n // 10 % 10
+units = n % 10
+sum_of_digits = hundreds + tens + units
+print(f"Сумма цифр: {sum_of_digits}")

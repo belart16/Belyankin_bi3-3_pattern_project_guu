@@ -25,7 +25,14 @@
 К оплате: 123.14
 """
 
-# TODO: прочитайте цену, количество и процент скидки
+price = float(input())
+quantity = int(input())
+discount = int(input())
 
-# TODO: вычислите и выведите три строки чека
+cost = price * quantity
+discount_amount = cost * discount / 100
+total = cost - discount_amount
 
+print(f"Стоимость: {cost:.2f}")
+print(f"Скидка: {discount_amount:.2f}")
+print(f"К оплате: {total:.2f}")

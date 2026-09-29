@@ -18,5 +18,5 @@
 a = int(input())
 b = int(input())
 
-# TODO: выведите сумму чисел a и b
+print(a + b)
 

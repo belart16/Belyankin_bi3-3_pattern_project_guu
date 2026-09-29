@@ -23,7 +23,9 @@
 Итоговая сумма: 14025.52
 """
 
-# TODO: прочитайте сумму, ставку и срок
+initial_amount = float(input())
+interest_rate = int(input())
+years = int(input())
 
-# TODO: вычислите итог по формуле сложного процента и выведите с округлением
-
+final_amount = initial_amount * (1 + interest_rate / 100) ** years
+print(f"Итоговая сумма: {final_amount:.2f}")

@@ -23,7 +23,9 @@ False
 Результат сравнения — значение типа bool: print(a > b) напечатает True или False.
 """
 
-# TODO: прочитайте a и b
+a = int(input())
+b = int(input())
 
-# TODO: выведите результаты трёх сравнений
-
+print(a > b)
+print(a < b)
+print(a == b)
