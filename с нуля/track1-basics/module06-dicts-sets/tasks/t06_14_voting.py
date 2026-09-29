@@ -20,5 +20,15 @@
 анна 3
 """
 
-# TODO: подсчёт голосов словарём и выбор победителя с учётом ничьих
 
+votes = {}
+n = int(input())
+for _ in range(n):
+    name = input().strip()
+    votes[name] = votes.get(name, 0) + 1
+
+max_votes = max(votes.values())
+winners = [name for name, count in votes.items() if count == max_votes]
+winner = min(winners)  
+
+print(f"{winner} {max_votes}")

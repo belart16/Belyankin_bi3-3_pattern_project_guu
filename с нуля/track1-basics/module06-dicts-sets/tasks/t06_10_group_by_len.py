@@ -14,5 +14,14 @@
 6: дерево
 """
 
-# TODO: словарь «длина → список слов», вывод по возрастанию длин
+words = input().split()
+length_groups = {}
+for word in words:
+    length = len(word)
+    if length in length_groups:
+        length_groups[length].append(word)
+    else:
+        length_groups[length] = [word]
 
+for length in sorted(length_groups):
+    print(f"{length}: {' '.join(length_groups[length])}")

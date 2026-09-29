@@ -14,5 +14,13 @@
 а
 """
 
-# TODO: множества букв двух строк, пересечение, сортировка
+first_string = input().lower().replace(" ", "")
+second_string = input().lower().replace(" ", "")
 
+first_set = set(first_string)
+second_set = set(second_string)
+
+common_letters = first_set & second_set
+
+if common_letters:
+    print(" ".join(sorted(common_letters)))

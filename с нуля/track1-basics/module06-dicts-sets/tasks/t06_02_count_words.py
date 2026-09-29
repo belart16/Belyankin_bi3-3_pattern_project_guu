@@ -15,5 +15,15 @@
 раму 1
 """
 
-# TODO: посчитайте частоты слов словарём и выведите их
+sentence = input().split()
+word_counts = {}
+for word in sentence:
+    if word in word_counts:
+        word_counts[word] += 1
+    else:
+        word_counts[word] = 1
 
+for word in sentence:
+    if word in word_counts:
+        print(f"{word} {word_counts[word]}")
+        del word_counts[word]

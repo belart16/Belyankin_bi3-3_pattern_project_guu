@@ -19,5 +19,9 @@ DICTIONARY = {
     "sun": "солнце",
 }
 
-# TODO: прочитайте слово и найдите перевод
+word = input()
+if word in DICTIONARY:
+    print(DICTIONARY[word])
+else:
+    print("нет в словаре")
 

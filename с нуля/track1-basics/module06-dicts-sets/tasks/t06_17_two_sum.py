@@ -15,5 +15,13 @@
 0 1
 """
 
-# TODO: найдите пару индексов с нужной суммой
+numbers = list(map(int, input().split()))
+target = int(input())
+num_to_index = {}
+for i, num in enumerate(numbers):
+    complement = target - num
+    if complement in num_to_index:
+        print(num_to_index[complement], i)
+        break
+    num_to_index[num] = i
 

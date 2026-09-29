@@ -14,5 +14,10 @@
 1 5
 """
 
-# TODO: разность множеств, сортировка, вывод
-
+first_set = set(map(int, input().split()))
+second_set = set(map(int, input().split()))
+difference = first_set - second_set
+if difference:
+    print(" ".join(map(str, sorted(difference))))
+    
+    

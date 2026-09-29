@@ -11,5 +11,7 @@
 3
 """
 
-# TODO: переведите числа в множество и посчитайте элементы
+numbers = input().split()
+unique_numbers = set(numbers)
+print(len(unique_numbers))
 

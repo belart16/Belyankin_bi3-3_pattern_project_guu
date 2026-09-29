@@ -12,5 +12,11 @@ a b a c a b
 a
 """
 
-# TODO: посчитайте частоты и найдите слово-максимум
+sentence = input().split()
+word_counts = {}
+for word in sentence:
+    if word in word_counts:
+        word_counts[word] += 1
+    else:
+        word_counts[word] = 1
 

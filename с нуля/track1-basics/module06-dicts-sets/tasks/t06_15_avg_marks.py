@@ -18,5 +18,15 @@
 борис 4.0
 """
 
-# TODO: словарь «имя → список оценок», затем средние
+marks = {}
+n = int(input())
+for _ in range(n):
+    name, subject, grade = input().split()
+    grade = int(grade)
+    if name not in marks:
+        marks[name] = []
+    marks[name].append(grade)
 
+for name in marks:
+    avg = round(sum(marks[name]) / len(marks[name]), 2)
+    print(f"{name} {avg}")

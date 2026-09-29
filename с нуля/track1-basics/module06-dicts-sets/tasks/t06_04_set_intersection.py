@@ -14,5 +14,8 @@
 3 7
 """
 
-# TODO: пересечение двух множеств, сортировка, вывод
-
+set1 = set(input().split())
+set2 = set(input().split())
+intersection = set1 & set2
+if intersection:
+    print(" ".join(sorted(intersection, key=int)))

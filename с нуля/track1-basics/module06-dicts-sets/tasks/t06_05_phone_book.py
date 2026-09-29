@@ -16,5 +16,9 @@
 111-22-33
 """
 
-# TODO: соберите словарь из n строк и выполните поиск
+n = int(input())
+phone_book = {}
+for _ in range(n):
+    name, number = input().split()
+    phone_book[name] = number
 

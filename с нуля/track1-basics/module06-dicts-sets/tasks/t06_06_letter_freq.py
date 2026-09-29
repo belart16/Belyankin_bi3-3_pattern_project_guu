@@ -13,5 +13,14 @@
 м: 2
 """
 
-# TODO: частоты букв словарём, вывод по отсортированным ключам
+text = input().lower()
+letter_counts = {}
+for char in text:
+    if char != " ":
+        if char in letter_counts:
+            letter_counts[char] += 1
+        else:
+            letter_counts[char] = 1
 
+for letter in sorted(letter_counts):
+    print(f"{letter}: {letter_counts[letter]}")

@@ -18,5 +18,13 @@ three три
 три: three
 """
 
-# TODO: постройте обратный словарь и выведите по sorted-ключам
+n = int(input())
+forward_dict = {}
+for _ in range(n):
+    english, russian = input().split()
+    forward_dict[english] = russian
 
+reverse_dict = {v: k for k, v in forward_dict.items()}
+
+for key in sorted(reverse_dict):
+    print(f"{key}: {reverse_dict[key]}")
