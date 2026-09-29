@@ -17,5 +17,8 @@
 4 5 1 2 3
 """
 
-# TODO: соберите результат из двух срезов: последние k и всё остальное
+numbers = input().split()
+k = int(input())
+rotated_numbers = numbers[-k:] + numbers[:-k]
+print(" ".join(rotated_numbers))
 

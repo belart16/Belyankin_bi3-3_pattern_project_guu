@@ -18,5 +18,13 @@
 3 6
 """
 
-# TODO: прочитайте матрицу и выведите её столбцы как строки
+n = int(input())
+m = int(input())
+matrix = []
+for _ in range(n):
+    row = list(map(int, input().split()))
+    matrix.append(row)
 
+for j in range(m):
+    row = [matrix[i][j] for i in range(n)]
+    print(" ".join(map(str, row)))

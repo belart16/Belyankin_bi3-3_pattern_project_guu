@@ -12,5 +12,11 @@
 1 3 6 10
 """
 
-# TODO: накапливайте сумму и собирайте результаты
+numbers = list(map(int, input().split()))
+partial_sums = []
+current_sum = 0
+for num in numbers:
+    current_sum += num
+    partial_sums.append(current_sum)
+print(" ".join(map(str, partial_sums)))
 

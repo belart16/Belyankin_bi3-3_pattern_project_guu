@@ -17,5 +17,11 @@
 Количество: 4
 """
 
-# TODO: накопите сумму и количество в цикле
-
+numbers = input().split()
+total = 0
+count = 0
+for num in numbers:
+    total += int(num)
+    count += 1
+print(f"Сумма: {total}")
+print(f"Количество: {count}")

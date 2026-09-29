@@ -13,5 +13,10 @@
 2
 """
 
-# TODO: посчитайте элементы, большие k
-
+numbers = list(map(int, input().split()))
+k = int(input())
+count = 0
+for num in numbers:
+    if num > k:
+        count += 1
+print(count)

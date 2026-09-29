@@ -12,5 +12,7 @@
 3 2 1
 """
 
-# TODO: разверните список и соберите строку
+numbers = input().split()
+reversed_numbers = numbers[::-1]
+print(" ".join(reversed_numbers))
 

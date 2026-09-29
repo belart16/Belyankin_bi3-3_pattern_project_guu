@@ -14,5 +14,6 @@
 1
 """
 
-# TODO: разберите строку и выведите элементы построчно
-
+numbers = input().split()
+for num in numbers:
+    print(num)

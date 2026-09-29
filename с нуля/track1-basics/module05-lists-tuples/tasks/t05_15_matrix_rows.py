@@ -17,5 +17,12 @@
 15
 """
 
-# TODO: прочитайте матрицу в список строк и просуммируйте каждую
+n = int(input())
+m = int(input())
+matrix = []
+for _ in range(n):
+    row = list(map(int, input().split()))
+    matrix.append(row)
 
+for row in matrix:
+    print(sum(row))

@@ -13,5 +13,10 @@
 2 4 6
 """
 
-# TODO: соберите чётные числа в новый список и выведите его
+numbers = input().split()
+evens = []
+for num in numbers:
+    if int(num) % 2 == 0:
+        evens.append(num)
+print(" ".join(evens))
 

@@ -12,5 +12,10 @@
 True
 """
 
-# TODO: переберите соседние пары (a[i] и a[i+1]) и сравните
-
+numbers = list(map(int, input().split()))
+has_neighbors = False
+for i in range(len(numbers) - 1):
+    if numbers[i] == numbers[i + 1]:
+        has_neighbors = True
+        break
+print(has_neighbors)

@@ -15,5 +15,8 @@
 2 3
 """
 
-# TODO: соберите новый список без x и выведите его
-
+numbers = input().split()
+x = input()
+filtered_numbers = [num for num in numbers if num != x]
+if filtered_numbers:
+    print(" ".join(filtered_numbers))

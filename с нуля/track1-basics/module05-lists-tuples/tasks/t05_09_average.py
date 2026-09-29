@@ -14,5 +14,6 @@
 2.5
 """
 
-# TODO: выведите round(sum(a) / len(a), 2)
-
+numbers = list(map(int, input().split()))
+average = round(sum(numbers) / len(numbers), 2)
+print(average)

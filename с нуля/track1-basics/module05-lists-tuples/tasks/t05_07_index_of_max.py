@@ -12,5 +12,8 @@
 2
 """
 
-# TODO: найдите индекс первого максимума (строгое сравнение >)
+numbers = list(map(int, input().split()))
+max_value = max(numbers)
+index_of_max = numbers.index(max_value)
+print(index_of_max)
 
