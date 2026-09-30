@@ -12,5 +12,12 @@ count_primes(10, 20)  → 4   (11, 13, 17, 19)
 
 
 def count_primes(a, b):
-    # TODO: перебор чисел отрезка с проверкой простоты
-    pass
+    if a > b:
+        a, b = b, a
+    sieve = [True] * (b + 1)
+    sieve[0] = sieve[1] = False
+    for i in range(2, int(b**0.5) + 1):
+        if sieve[i]:
+            for j in range(i * i, b + 1, i):
+                sieve[j] = True
+    return sum(sieve[a:b + 1])

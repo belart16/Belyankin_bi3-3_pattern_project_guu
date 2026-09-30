@@ -13,5 +13,7 @@ gcd(0, 5)   → 5
 
 
 def gcd(a, b):
-    # TODO: цикл Евклида: while b: a, b = b, a % b
-    pass
+    while b != 0:
+        a, b = b, a % b
+    return abs(a)
+    

@@ -12,5 +12,5 @@ lcm(7, 13) → 91
 
 
 def lcm(a, b):
-    # TODO: a * b // gcd(a, b); gcd можно взять из задачи 11-01
-    pass
+    from t11_01_gcd import gcd
+    return abs(a * b) // gcd(a, b)
