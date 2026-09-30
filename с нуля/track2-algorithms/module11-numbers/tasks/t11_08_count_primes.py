@@ -19,5 +19,5 @@ def count_primes(a, b):
     for i in range(2, int(b**0.5) + 1):
         if sieve[i]:
             for j in range(i * i, b + 1, i):
-                sieve[j] = True
+                sieve[j] = False
     return sum(sieve[a:b + 1])
