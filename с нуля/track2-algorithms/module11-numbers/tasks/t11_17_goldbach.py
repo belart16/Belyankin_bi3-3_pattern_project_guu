@@ -14,5 +14,18 @@ goldbach(26) → (3, 23)
 
 
 def goldbach(n):
-    # TODO: перебор p от 2 вверх, проверка простоты p и n - p
-    pass
+    if n < 4 or n % 2 != 0:
+        raise ValueError("n must be an even number greater than or equal to 4")
+
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num**0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+
+    for p in range(2, n):
+        q = n - p
+        if is_prime(p) and is_prime(q):
+            return (p, q)

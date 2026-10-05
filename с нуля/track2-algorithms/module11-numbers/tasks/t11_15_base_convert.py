@@ -14,5 +14,14 @@ base_convert(7, 7)    → "10"
 
 
 def base_convert(n, base):
-    # TODO: как в 11-14, но цифры из "0123456789ABCDEF"
-    pass
+    if n < 1:
+        raise ValueError("n must be greater than or equal to 1")
+    if base < 2 or base > 16:
+        raise ValueError("base must be between 2 and 16")
+
+    digits = "0123456789ABCDEF"
+    result = ''
+    while n > 0:
+        result = digits[n % base] + result
+        n //= base
+    return result

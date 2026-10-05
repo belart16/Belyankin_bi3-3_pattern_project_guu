@@ -12,5 +12,10 @@ fib_even_sum(1000) → 798   (2 + 8 + 34 + 144 + 610)
 
 
 def fib_even_sum(n):
-    # TODO: генерировать фибоначчи до n и суммировать чётные
-    pass
+    a, b = 1, 2
+    even_sum = 0
+    while a <= n:
+        if a % 2 == 0:
+            even_sum += a
+        a, b = b, a + b
+    return even_sum

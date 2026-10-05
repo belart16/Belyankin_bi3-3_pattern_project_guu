@@ -12,5 +12,5 @@ factorial_digit_sum(100) → 648
 
 
 def factorial_digit_sum(n):
-    # TODO: факториал циклом, затем сумма цифр строкового представления
-    pass
+    from math import factorial
+    return sum(int(digit) for digit in str(factorial(n)))

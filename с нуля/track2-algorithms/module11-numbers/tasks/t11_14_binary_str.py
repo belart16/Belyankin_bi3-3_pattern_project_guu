@@ -13,5 +13,11 @@ binary_str(1)  → "1"
 
 
 def binary_str(n):
-    # TODO: забирайте остатки n % 2, уменьшая n //= 2, потом разверните
-    pass
+    if n < 1:
+        raise ValueError("n must be greater than or equal to 1")
+    
+    result = ''
+    while n > 0:
+        result = str(n % 2) + result
+        n //= 2
+    return result
