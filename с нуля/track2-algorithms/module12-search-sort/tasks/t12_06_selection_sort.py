@@ -12,5 +12,14 @@ selection_sort([3, 1, 2]) → [1, 2, 3]
 
 
 def selection_sort(items):
-    # TODO: копия; поиск минимума в остатке + обмен
-    pass
+    sorted_items = items.copy()
+    n = len(sorted_items)
+
+    for i in range(n):
+        min_index = i
+        for j in range(i + 1, n):
+            if sorted_items[j] < sorted_items[min_index]:
+                min_index = j
+        sorted_items[i], sorted_items[min_index] = sorted_items[min_index], sorted_items[i]
+
+    return sorted_items

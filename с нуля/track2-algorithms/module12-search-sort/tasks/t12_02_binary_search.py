@@ -13,5 +13,15 @@ binary_search([1, 3, 5, 7, 9], 4) → -1
 
 
 def binary_search(items, x):
-    # TODO: lo/hi/mid по шпаргалке
-    pass
+    left, right = 0, len(items) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+        if items[mid] == x:
+            return mid
+        elif items[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return -1

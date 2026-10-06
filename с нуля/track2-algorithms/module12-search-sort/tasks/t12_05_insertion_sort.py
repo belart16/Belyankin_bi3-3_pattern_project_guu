@@ -12,5 +12,15 @@ insertion_sort([3, 1, 2]) → [1, 2, 3]
 
 
 def insertion_sort(items):
-    # TODO: копия + «заталкивание» каждого элемента в отсортированную часть
-    pass
+    sorted_items = items.copy()
+    n = len(sorted_items)
+
+    for i in range(1, n):
+        key = sorted_items[i]
+        j = i - 1
+        while j >= 0 and sorted_items[j] > key:
+            sorted_items[j + 1] = sorted_items[j]
+            j -= 1
+        sorted_items[j + 1] = key
+
+    return sorted_items

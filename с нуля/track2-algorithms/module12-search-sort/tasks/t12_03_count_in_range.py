@@ -11,5 +11,8 @@ count_in_range([1, 5, 3, 8, 2], 2, 5) → 3   (5, 3, 2)
 
 
 def count_in_range(items, lo, hi):
-    # TODO: включение с двумя условиями
-    pass
+    count = 0
+    for item in items:
+        if lo <= item <= hi:
+            count += 1
+    return count
